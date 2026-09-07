@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #102027;
+  --surface: #37474f;
+  --surface-dark: #263238;
+  --accent: #e53935;
+  --accent-soft: #ff7043;
+}
+
+body {
+  @apply bg-[#102027] text-slate-100 antialiased;
+}
+
+.card {
+  @apply rounded-lg border border-white/10 bg-[#263238] p-5 shadow;
+}
+
+.input {
+  @apply w-full rounded-md border border-white/15 bg-[#102027] px-3 py-2 text-sm text-slate-100 placeholder:text-slate-400 outline-none focus:border-[#FF7043] focus:ring-1 focus:ring-[#FF7043];
+}
+
+.label {
+  @apply mb-1 block text-xs font-medium uppercase tracking-wide text-slate-300;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-md bg-[#E53935] px-4 py-2 text-sm font-semibold text-white hover:bg-[#B71C1C] disabled:opacity-50;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-md border border-white/15 bg-[#37474F] px-4 py-2 text-sm font-medium text-slate-100 hover:bg-[#546E7A];
+}
+
+.table-wrap {
+  @apply overflow-x-auto rounded-lg border border-white/10;
+}
+
+table.data {
+  @apply w-full text-sm;
+}
+
+table.data thead {
+  @apply bg-[#102027] text-left text-xs uppercase tracking-wide text-slate-300;
+}
+
+table.data th,
+table.data td {
+  @apply border-b border-white/10 px-3 py-2.5;
+}
+
+table.data tbody tr:hover {
+  @apply bg-white/5;
+}
+
+.sidebar-link {
+  @apply flex items-center gap-3 rounded-md px-3 py-2 text-sm text-slate-200 hover:bg-white/10;
+}
+
+.sidebar-link-active {
+  @apply bg-[#E53935] text-white hover:bg-[#E53935];
+}
